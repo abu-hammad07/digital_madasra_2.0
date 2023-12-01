@@ -1,30 +1,4 @@
-<!DOCTYPE html>
-<html lang="en" dir="rtl">
 
-<head>
-
-  <title>Admin - Digital Madarsa</title>
-
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="handheldfriendly" content="true"/>
-  <meta name="MobileOptimized" content="width"/>
-  <meta name="description" content="Digital Madarsa"/>
-  <meta name="keywords" content="Digital Madarsa"/>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-  <!-- Favicon Link -->
-  <link rel="shortcut icon" type="image/png" href="../assets/images/favicon.png" />
-  <!-- CSS Link -->
-  <link rel="stylesheet" href="../assets/css/style.css">
-  <link rel="stylesheet" href="/assets/css/umar.css">
-
-  <!-- <link rel="stylesheet" href="../assets/css/template/owl.carousel.min.css"> -->
-  <link rel="stylesheet" href="../assets/css/bootstrap/style.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
-</head>
-
-<body>
-  <!-- Body Wrapper -->
 
   <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
     data-sidebar-position="fixed" data-header-position="fixed">
@@ -60,7 +34,7 @@
             <!-- Student -->
             <!-- ============================= -->
             <li class="sidebar-item mt-4">
-              <a class="sidebar-link has-arrow" href="#" aria-expanded="false">
+              <a class="sidebar-link has-arrow" href="" aria-expanded="false">
                 <span class="d-flex">
                   <i class="ti ti-users"></i>
                 </span>
@@ -68,7 +42,7 @@
               </a>
               <ul aria-expanded="false" class="collapse first-level">
                 <li class="sidebar-item">
-                  <a href="st-details.html" class="sidebar-link">
+                  <a href="./st-details.php" class="sidebar-link">
                     <div class="round-16 d-flex align-items-center justify-content-center">
                       <i class="ti ti-circle"></i>
                     </div>
@@ -76,7 +50,7 @@
                   </a>
                 </li>
                 <li class="sidebar-item">
-                  <a href="st-attendence.html" class="sidebar-link">
+                  <a href="./st-attendence.php" class="sidebar-link">
                     <div class="round-16 d-flex align-items-center justify-content-center">
                       <i class="ti ti-circle"></i>
                     </div>
@@ -84,7 +58,7 @@
                   </a>
                 </li>
                 <li class="sidebar-item">
-                  <a href="st-admission-form.html" class="sidebar-link">
+                  <a href="./st-admission-form.php" class="sidebar-link">
                     <div class="round-16 d-flex align-items-center justify-content-center">
                       <i class="ti ti-circle"></i>
                     </div>

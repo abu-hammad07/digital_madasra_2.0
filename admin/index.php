@@ -1,3 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+
+  <title>Admin - Digital Madarsa</title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="handheldfriendly" content="true"/>
+  <meta name="MobileOptimized" content="width"/>
+  <meta name="description" content="Digital Madarsa"/>
+  <meta name="keywords" content="Digital Madarsa"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <!-- Favicon Link -->
+  <link rel="shortcut icon" type="image/png" href="../assets/images/favicon.png" />
+  <!-- CSS Link -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/umar.css">
+
+  <!-- <link rel="stylesheet" href="../assets/css/template/owl.carousel.min.css"> -->
+  <link rel="stylesheet" href="../assets/css/bootstrap/style.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+</head>
+
+<body>
+  <!-- Body Wrapper -->
+
 <?php
 require('./header.php')
 ?>
@@ -9,7 +38,7 @@ require('./header.php')
             <div class="card w-100 overflow-hidden">
               <div class="card-body py-3">
                 <div class="row justify-content-between align-items-center">
-                  <h3 class="mb-9 jameel-kasheeda text-primary">خوش آمدید <span
+                  <h3 class="mb-9 jameel-kasheeda text-primary">خوش آمدید<span
                       class="mx-1">🎉</span><span>عمرراہی </span>صاحب</h3>
                   <p class="mb-9 jameel-kasheeda fs-5 word-spacing-4px">حکومت نے مدارس میں کیے جانے والے سروے کے لیے سوالات کا ایک
                     پروفارمہ تیار کیا ہے۔
