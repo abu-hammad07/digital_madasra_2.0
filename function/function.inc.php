@@ -1,6 +1,6 @@
 <?php
 
-require('./config/config.php');
+require('../config/config.php');
 
 function get_safe_value($conn, $str) {
     if ($str != '') {

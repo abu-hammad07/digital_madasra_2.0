@@ -61,8 +61,8 @@
 
     <!-- Student Admission Form (Start) -->
     <div class="row">
-      <!-- Madarsa Info -->
       <form action="./st_admi_all_code.php" method="POST">
+        <!-- Madarsa Info -->
         <div class="col-12">
           <div class="card">
             <div class="border-bottom title-part-padding mt-3">
@@ -71,12 +71,12 @@
             <div class="card-body">
               <div class="row g-4">
                 <div class="col-md-6">
-                  <label for="رجسٹریشن نمبر" class="fs-5 mb-1" for="reg-number">رجسٹریشن نمبر</label>
-                  <input type="number" name="reg_number" class="form-control fw-semibold fs-3" required placeholder="#04321" />
+                  <label class="fs-5 mb-1" for="std-reg-no">رجسٹریشن نمبر</label>
+                  <input type="number" name="std_reg_no" id="std-reg-no" class="form-control fw-semibold fs-3" required placeholder="#04321">
                   <!-- <span class="error" id="std-area-err"></span> -->
                 </div>
                 <div class="col-md-6">
-                  <label for="" class="fs-5 mb-1" for="std-area">رہائش منتخب کریں</label>
+                  <label class="fs-5 mb-1" for="std-area">رہائش منتخب کریں</label>
                   <select id="std-area" name="std_area" class="form-select fw-semibold jameel-kasheeda fs-4 cursor-pointer" data-allow-clear="true">
                     <option value="" class="jameel-kasheeda">- - -</option>
                     <option value="رہائشی" class="jameel-kasheeda">رہائشی</option>
@@ -204,34 +204,20 @@
                   <input type="date" name="adm_date" class="form-control fw-semibold fs-3" required placeholder="DD/MM/YYYY" />
                   <!-- <span class="error" id="std-area-err"></span> -->
                 </div>
+                <!-- Submit Button -->
+                <div class="col-md-12 mt-4 jameel-kasheeda">
+                  <input type="submit" id="submit" name="submit" class="btn btn-primary fw-semibold fs-5" value="ایڈ کریں">
+                </div>
               </div>
             </div>
           </div>
         </div>
       </form>
     </div>
-  </div>
-
-  </div>
-  <!-- Submit Button -->
-  <div class="col-md-12 mt-4 jameel-kasheeda">
-    <button type="button" id="submit" name="submit" class="btn btn-primary fw-semibold fs-5">ایڈ کریں</button>
-  </div>
-  </div>
-
-
-
-
-
-
-  </div>
-  </div>
-  <!-- Student Admission Form (End) -->
+    <!-- Student Admission Form (End) -->
   </div>
   <!-- Main Content (End) -->
-  </div>
   <div class="dark-transparent sidebartoggler"></div>
-  </div>
 
   <!--  Mobilenavbar -->
   <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="mobilenavbar" aria-labelledby="offcanvasWithBothOptionsLabel">
@@ -496,23 +482,38 @@
     setTimeout(clearConsole, 7000); // 7000 milliseconds = 7 seconds
   </script>
 
-  <!--  Import Js Files -->
-  <script src="../assets/js/jquery/jquery.min.js"></script>
-  <script src="../assets/js/template/simplebar.min.js"></script>
-  <script src="../assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+  <!-- Endlink section  -->
+  <?php
+  require('./end_link.php');
+  ?>
 
-  <!--  core files -->
-  <script src="../assets/js/template/app.min.js"></script>
-  <script src="../assets/js/template/app.init.js"></script>
-  <script src="../assets/js/template/app-style-switcher.js"></script>
-  <script src="../assets/js/template/sidebarmenu.js"></script>
-  <script src="../assets/js/template/custom.js"></script>
+  <!-- required for urdu -->
+  <script>
+    document.getElementById('submit').addEventListener('click', function() {
+      var stdNameInput = document.getElementsByName('std_name')[0].value;
+      var stdFatherNameInput = document.getElementsByName('std_father_name')[0].value;
+      var stdBirthPlaceInput = document.getElementsByName('std_birth_place')[0].value;
+      var stdAddressInput = document.getElementsByName('std_address')[0].value;
+      var preSchoolInput = document.getElementsByName('pre_school')[0].value;
+      var preClassInput = document.getElementsByName('pre_class')[0].value;
+      var nextClassInput = document.getElementsByName('next_class')[0].value;
 
-  <!--  current page js files -->
-  <script src="../assets/js/template/owl.carousel.min.js"></script>
-  <script src="../assets/js/template/apexcharts.min.js"></script>
-  <!-- <script src="../assets/js/template/widgets-charts.js"></script> -->
-  <script src="../assets/js/template/dashboard.js"></script>
+      // Regular expression to match Urdu characters
+      var urduRegex = /[\u0600-\u06FF]/;
+
+      if (!urduRegex.test(preSchoolInput) || !urduRegex.test(preClassInput) || !urduRegex.test(nextClassInput)) {
+        alert('Please only type in Urdu.');
+        return;
+      }
+
+      // If all inputs are in Urdu, you can proceed with form submission or other actions.
+      // Add your code here.
+
+    });
+  </script>
+
+
+
 </body>
 
 </html>
