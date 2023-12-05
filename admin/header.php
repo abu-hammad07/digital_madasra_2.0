@@ -22,7 +22,7 @@
             <!-- Dashboard -->
             <!-- =================== -->
             <li class="sidebar-item mt-4">
-              <a class="sidebar-link" href="index.html" aria-expanded="false">
+              <a class="sidebar-link" href="./index.php" aria-expanded="false">
                 <span>
                   <i class="ti ti-layout-grid-add"></i>
                 </span>
@@ -34,7 +34,7 @@
             <!-- Student -->
             <!-- ============================= -->
             <li class="sidebar-item mt-4">
-              <a class="sidebar-link has-arrow" href="" aria-expanded="false">
+              <a class="sidebar-link has-arrow" href="#" aria-expanded="false">
                 <span class="d-flex">
                   <i class="ti ti-users"></i>
                 </span>

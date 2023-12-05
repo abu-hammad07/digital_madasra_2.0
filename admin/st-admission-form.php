@@ -118,12 +118,12 @@
                 <div class="col-md-6">
                   <label class="fs-5 mb-1" for="std-name">نام</label>
                   <input type="text" name="std_name" class="form-control fw-semibold fs-4" required placeholder="احمد" />
-                  <!-- <span class="error" id="std-area-err"></span> -->
+                  <span class="error text-danger inter" id="std-name-err"></span>
                 </div>
                 <div class="col-md-6">
                   <label class="fs-5 mb-1" for="std-father-name">والد کا نام</label>
                   <input type="text" name="std_father_name" class="form-control fw-semibold fs-4" required placeholder="شفیع عالم" />
-                  <!-- <span class="error" id="std-area-err"></span> -->
+                  <span class="error text-danger inter" id="std-father-err"></span>
                 </div>
                 <div class="col-md-6">
                   <label class="fs-5 mb-1" for="std-dbo">تاریخ پیدائش</label>
@@ -133,12 +133,12 @@
                 <div class="col-md-6">
                   <label class="fs-5 mb-1" for="std-birth-place">مقام پیدائش</label>
                   <input type="text" name="std_birth_place" class="form-control fw-semibold fs-3" required placeholder="کراچی" />
-                  <!-- <span class="error" id="std-area-err"></span> -->
+                  <span class="error text-danger inter" id="std-birth-err"></span>
                 </div>
                 <div class="col-md-12">
                   <label class="fs-5 mb-1" for="std-address">پتہ</label>
                   <input type="text" name="std_address" class="form-control fw-semibold fs-4" required placeholder="36/جی لانڈھی کراچی۔ گلی نمبر 1" />
-                  <!-- <span class="error" id="std-area-err"></span> -->
+                  <span class="error text-danger inter" id="std-address-err"></span>
                 </div>
               </div>
             </div>
@@ -155,12 +155,12 @@
                 <div class="col-md-6">
                   <label class="fs-5 mb-1" for="guar-name">سرپرست کا نام</label>
                   <input type="text" name="guar_name" class="form-control fw-semibold fs-4" required placeholder="شفیع عالم" />
-                  <!-- <span class="error" id="std-area-err"></span> -->
+                  <span class="error text-danger inter" id="guar-name-err"></span>
                 </div>
                 <div class="col-md-6">
                   <label class="fs-5 mb-1" for="guar-relation">سرپرست سے رشتہ</label>
                   <input type="text" name="guar_relation" class="form-control fw-semibold fs-4" required placeholder="والدِ محترم" />
-                  <!-- <span class="error" id="std-area-err"></span> -->
+                  <span class="error text-danger inter" id="guar-relation-err"></span>
                 </div>
                 <div class="col-md-6">
                   <label class="fs-5 mb-1" for="guar-number">فون نمبر</label>
@@ -170,7 +170,7 @@
                 <div class="col-md-6">
                   <label class="fs-5 mb-1" for="guar-address">پتہ</label>
                   <input type="text" name="guar_address" class="form-control fw-semibold fs-4" required placeholder="36/جی لانڈھی کراچی۔ گلی نمبر 1" />
-                  <!-- <span class="error" id="std-area-err"></span> -->
+                  <span class="error text-danger inter" id="guar-address-err"></span>
                 </div>
               </div>
             </div>
@@ -187,22 +187,22 @@
                 <div class="col-md-6">
                   <label class="fs-5 mb-1" for="pre-school">سابقہ مدرسہ</label>
                   <input type="text" name="pre_school" class="form-control fw-semibold fs-4" required placeholder="دارالعلوم کراچی" />
-                  <!-- <span class="error" id="std-area-err"></span> -->
+                  <span class="error text-danger inter" id="pre-school-err"></span>
                 </div>
                 <div class="col-md-6">
                   <label class="fs-5 mb-1" for="pre-class">سابقہ درجہ</label>
                   <input type="text" name="pre_class" class="form-control fw-semibold fs-4" required placeholder="اوٰلی" />
-                  <!-- <span class="error" id="std-area-err"></span> -->
+                  <span class="error text-danger inter" id="pre-class-err"></span>
                 </div>
                 <div class="col-md-6">
                   <label class="fs-5 mb-1" for="next-class">مطلوبہ درجہ</label>
                   <input type="text" name="next_class" class="form-control fw-semibold fs-4" required placeholder="ثانیہ" />
-                  <!-- <span class="error" id="std-area-err"></span> -->
+                  <span class="error text-danger inter" id="next-class-err"></span>
                 </div>
                 <div class="col-md-6">
                   <label class="fs-5 mb-1" for="adm-date">تاریخ داخلہ</label>
                   <input type="date" name="adm_date" class="form-control fw-semibold fs-3" required placeholder="DD/MM/YYYY" />
-                  <!-- <span class="error" id="std-area-err"></span> -->
+                  <!-- <span class="error bg-danger" id="std-area-err"></span> -->
                 </div>
                 <!-- Submit Button -->
                 <div class="col-md-12 mt-4 jameel-kasheeda">
@@ -216,6 +216,7 @@
     </div>
     <!-- Student Admission Form (End) -->
   </div>
+
   <!-- Main Content (End) -->
   <div class="dark-transparent sidebartoggler"></div>
 
@@ -486,32 +487,6 @@
   <?php
   require('./end_link.php');
   ?>
-
-  <!-- required for urdu -->
-  <script>
-    document.getElementById('submit').addEventListener('click', function() {
-      var stdNameInput = document.getElementsByName('std_name')[0].value;
-      var stdFatherNameInput = document.getElementsByName('std_father_name')[0].value;
-      var stdBirthPlaceInput = document.getElementsByName('std_birth_place')[0].value;
-      var stdAddressInput = document.getElementsByName('std_address')[0].value;
-      var preSchoolInput = document.getElementsByName('pre_school')[0].value;
-      var preClassInput = document.getElementsByName('pre_class')[0].value;
-      var nextClassInput = document.getElementsByName('next_class')[0].value;
-
-      // Regular expression to match Urdu characters
-      var urduRegex = /[\u0600-\u06FF]/;
-
-      if (!urduRegex.test(preSchoolInput) || !urduRegex.test(preClassInput) || !urduRegex.test(nextClassInput)) {
-        alert('Please only type in Urdu.');
-        return;
-      }
-
-      // If all inputs are in Urdu, you can proceed with form submission or other actions.
-      // Add your code here.
-
-    });
-  </script>
-
 
 
 </body>

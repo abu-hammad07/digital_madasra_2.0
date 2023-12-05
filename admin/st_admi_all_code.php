@@ -35,13 +35,13 @@ if(isset($_POST['submit'])) {
         $result = mysqli_query($conn, $sql);
 
         if ($result) {
-            // echo "New record created successfully";
-            header('location: st-admission-form.php');
             ?>
             <script>
                 alert("New record created successfully");
-            </script>
+                </script>
             <?php
+            // echo "New record created successfully";
+            header('location: st-admission-form.php');
         } else {
             echo "Error: " . $sql . "<br>" . mysqli_error($conn);
         }
